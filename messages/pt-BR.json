@@ -1,0 +1,88 @@
+{
+  "Index": {
+    "title": "Olá mundo!"
+  },
+  "Login": {
+    "title": "Entrar",
+    "greetings": "Bem-vindo de volta!",
+    "description": "Faça login na sua conta para continuar.",
+    "email": "Email",
+    "password": "Senha",
+    "submit": "Entrar",
+    "forgot-password": "Esqueceu a senha?",
+    "sign-up": "Cadastre-se",
+    "dont-have-account": "Não tem uma conta?"
+  },
+  "Actions": {
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "create": "Criar",
+    "update": "Atualizar"
+  },
+  "Sidebar": {
+    "dashboard": "Dashboard",
+    "new": "Novo",
+    "create": "Criar",
+    "plural": {
+      "transaction": "Transações"
+    },
+    "singular": {
+      "transaction": "Transação"
+    },
+    "settings": "Configurações"
+  },
+  "Transaction": {
+    "list": {
+      "title": "Transações",
+      "description": "Gerencie suas transações"
+    },
+    "name": "Nome",
+    "description": "Descrição",
+    "due-date": "Data de vencimento",
+    "amount": "Valor",
+    "transaction-type": "Tipo de transação",
+    "create": "Criar transação",
+    "update": "Atualizar transação",
+    "delete": "Excluir transação",
+    "actions": "Ações",
+    "messages": {
+      "deleted": "Transação excluída com sucesso",
+      "updated": "Transação atualizada com sucesso",
+      "created": "Transação criada com sucesso",
+      "not-found": "Transação não encontrada",
+      "already-exists": "Transação já existe",
+      "confirm-delete": "Tem certeza que deseja excluir esta transação{name}?",
+      "undone-operation": "Esta operação não pode ser desfeita.",
+      "confirmation": "Tem certeza?",
+      "error-occurred": "Ocorreu um erro. Tente novamente.",
+      "error-delete": "Ocorreu um erro ao excluir a transação. Tente novamente.",
+      "error-update": "Ocorreu um erro ao atualizar a transação. Tente novamente.",
+      "error-create": "Ocorreu um erro ao criar a transação. Tente novamente."
+    }
+  },
+  "Settings": {
+    "title": "Configurações",
+    "general": "Geral",
+    "save": "Salvar",
+    "store": {
+      "name": "Nome da loja",
+      "description": "Usado para identificar sua loja."
+    }
+  },
+  "DataTable": {
+    "no-results": "Nenhum resultado.",
+    "view": "Visualizar",
+    "toggle-columns": "Alternar colunas",
+    "filter-by": "Filtrar por...",
+    "reset": "Redefinir",
+    "row-selected": "{selected} de {count} linha(s) selecionada(s).",
+    "rows-per-page": "Linhas por página",
+    "pagination": "Página {page} de {pages}",
+    "first-page": "Ir para a primeira página",
+    "last-page": "Ir para a última página",
+    "previous-page": "Ir para a página anterior",
+    "next-page": "Ir para a próxima página"
+  }
+}
