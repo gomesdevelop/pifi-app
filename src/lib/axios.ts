@@ -3,13 +3,15 @@ import { signOut, getSession } from "next-auth/react";
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+  },
 });
 
 // Add a request interceptor
 api.interceptors.request.use(
   async (config) => {
-    config.headers["Access-Control-Allow-Origin"] = "*";
-
     const session = await getSession();
 
     if (session) {
