@@ -41,8 +41,8 @@ jobs:
           build-args: |
             NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL}}
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ steps.build-number.outputs.BUILD_NUMBER }}
-            ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ steps.build-number.outputs.BUILD_NUMBER }}
+            ${{ env.IMAGE_NAME }}:latest
 
   deployment:
     runs-on: ubuntu-latest
