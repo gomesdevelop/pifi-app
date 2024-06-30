@@ -8,6 +8,8 @@ const api = axios.create({
 // Add a request interceptor
 api.interceptors.request.use(
   async (config) => {
+    config.headers["Access-Control-Allow-Origin"] = "*";
+
     const session = await getSession();
 
     if (session) {
