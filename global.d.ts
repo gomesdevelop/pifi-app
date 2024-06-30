@@ -9,6 +9,20 @@ type Messages = typeof en_US;
 declare global {
   // Use type safe message keys with `next-intl`
   interface IntlMessages extends Messages {
+    DataTable: {
+      "no-results": string;
+      view: string;
+      "toggle-columns": string;
+      "filter-by": string;
+      reset: string;
+      "row-selected": string;
+      "rows-per-page": string;
+      pagination: string;
+      "first-page": string;
+      "last-page": string;
+      "previous-page": string;
+      "next-page": string;
+    };
     Login: {
       title: string;
       greetings: string;

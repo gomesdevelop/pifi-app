@@ -10,22 +10,22 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { useRouter } from "@/navigation";
-import { deleteLabor, fetchLabor } from "@/services/labors";
+import { deleteTransaction, fetchTransaction } from "@/services/transaction";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import React from "react";
 
-const LaborDeleteForm: React.FC = () => {
-  const t = useTranslations("Labor");
+const TransactionDeleteForm: React.FC = () => {
+  const t = useTranslations("Transaction");
   const queryClient = useQueryClient();
   const params = useParams<{ id: string }>();
   const router = useRouter();
 
   const { mutate, isSuccess } = useMutation({
-    mutationFn: deleteLabor,
+    mutationFn: deleteTransaction,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["labors"] });
+      queryClient.invalidateQueries({ queryKey: ["transactions"] });
     },
   });
 
@@ -36,8 +36,8 @@ const LaborDeleteForm: React.FC = () => {
 
   // Queries
   const { data, isLoading } = useQuery({
-    queryKey: ["labors", params.id],
-    queryFn: () => fetchLabor(params.id),
+    queryKey: ["transactions", params.id],
+    queryFn: () => fetchTransaction(params.id),
   });
 
   if (isLoading) return <div>Loading...</div>;
@@ -49,7 +49,7 @@ const LaborDeleteForm: React.FC = () => {
           <DialogTitle>{t("delete")}</DialogTitle>
           <DialogDescription>
             {t("messages.confirm-delete", {
-              name: ` ${data ? data?.role : ""}`,
+              name: ` ${data ? data?.description : ""}`,
             })}
 
             {" " + t("messages.undone-operation")}
@@ -63,4 +63,4 @@ const LaborDeleteForm: React.FC = () => {
   );
 };
 
-export default LaborDeleteForm;
+export default TransactionDeleteForm;
